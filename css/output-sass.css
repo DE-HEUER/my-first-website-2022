@@ -1,0 +1,188 @@
+/*
+*
+*
+*
+*/
+html {
+  font-size: 1em;
+  line-height: 1.35;
+}
+@media only screen and (max-width: 680px) {
+  html {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  html {
+    font-size: 1.5em;
+  }
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  color: #FF873D;
+}
+
+.box {
+  display: flex;
+  width: 300px;
+  height: 150px;
+  background-color: #FF873D;
+  text-align: center;
+  align-items: center;
+  padding: 100px 0px;
+}
+.box p {
+  flex: 1;
+  flex-wrap: nowrap;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 4px 2px 0 #000;
+  display: inline;
+  padding: 50px;
+  align-content: center;
+  justify-content: center;
+  font-size: xx-large;
+  letter-spacing: 8px;
+}
+
+.form-input .email,
+.form-input .name {
+  margin-bottom: 15px;
+}
+.form-input .input-email {
+  padding: 5px 10px;
+}
+.form-input .input-name {
+  padding: 5px 10px;
+}
+.form-input .button-signup {
+  padding: 5px 10px;
+}
+
+.site-header nav ul {
+  padding: 0;
+  margin: 0;
+}
+.site-header nav li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 680px) {
+  .site-header nav li {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .site-header nav li {
+    margin-right: 50px;
+    padding: 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+}
+.site-header nav a {
+  display: block;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #0C73B2;
+  color: #fff;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1100px) {
+  .site-header nav a {
+    padding: 20px 50px 20px 50px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+}
+
+/*-- Nesting SCSS
+.site-header nav {
+    ul {
+        padding: 0;
+        margin: 0;
+        // -- Inheritance SCSS
+        @extend .group;
+    }
+    li {
+        list-style: none;
+        float: left;
+        margin-right: 10px;
+    }
+    a {
+        display: block;
+        padding: 10px;
+        background-color: $background;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+*/
+.btn-a, .btn-b {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  border: 1px solid #0C73B2;
+  border-radius: 7px;
+  font-size: 80%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.btn-b {
+  color: #FF873D;
+  background-color: #63bdf4;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#63bdf4));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #FFF, #63bdf4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #FFF, #63bdf4);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #FFF, #63bdf4);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #FFF, #63bdf4);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #FFF, #63bdf4);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr="#FFF", EndColorStr="#63bdf4");
+}
+
+.btn-b:hover {
+  color: #4C2E6E;
+}
+
+.group:before, .site-header nav ul:before,
+.group:after,
+.site-header nav ul:after {
+  content: "";
+  display: table;
+}
+
+.group:after, .site-header nav ul:after {
+  clear: both;
+}
+
+.group, .site-header nav ul {
+  zoom: 1;
+}
+
+/*# sourceMappingURL=output-sass.css.map */

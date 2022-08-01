@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- LINKS : DEPENDENCY &&- JQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://malsup.github.io/jquery.cycle2.js"></script> -->
+    <!-- <script src="http://learnwebcode.github.io/declarativeToggle/js/jquery.declarativeToggle.min.js"></script> -->
+
+    <!-- #01 -- JQuery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- #02 -- JQuery DEPENDENCY -->
+    <script type="text/javascript" src="js/cycle2.js"></script>
+    <!-- #03 -- Declarative Toggle : JQuery DEPENDENCY -->
+    <script type="text/javascript" src="js/declarativeToggle.min.js"></script>
+    <!-- #04 -- JQuery Tab Content : NOT WORKING!!! -->
+    <script type="text/javascript" src="js/tab-content.js"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tab-content.css">
+
+    <title>JavaScript Toggle : Hide & Reveal</title>
+    <!-- JQuery : TAB-CONTENT -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".tabs-list li a").click(function(e) {
+                e.preventDefault();
+            });
+
+            $(".tabs-list li").click(function() {
+                var tabid = $(this).find("a").attr("href");
+                $(".tabs-list li,.tabs div.tab").removeClass("active"); // removing active class from tab
+
+                $(".tab").hide(); // hiding open tab
+                $(tabid).show(); // show tab
+                $(this).addClass("active"); //  adding active class to clicked tab
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <header class="section">
+
+        <!-- container -->
+        <div class="container">
+            <h1>JavaScript Toggle : Hide & Reveal</h1>
+            <p class="hide-small">JavaScript Toggle Project</p>
+
+            <!-- MENU TOGGLE -->
+            <span data-toggle-target=".site-nav" class="toggle-btn toggle-menu">MENU</span>
+
+            <nav class="site-nav">
+                <ul class="group">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li class="hide-small"><a href="#">FAQs</a></li>
+                    <li class="hide-small"><a href="#">Links</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /container -->
+
+    </header>
+    <!-- /section -->
+
+    <!-- ============================================ -->
+
+    <div class="content-area group section">
+
+        <!-- container -->
+        <div class="container">
+            <h2>Welcome to the JavaScript Toggle : Hide & Reveal</h2>
+            <!-- row -->
+            <div class="row">
+
+                <!-- col -->
+                <div class="col col-md-8 main-area push-down-sm">
+
+                    <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-pause-on-hover="true">
+
+                        <span class="cycle-prev">&laquo;</span>
+                        <span class="cycle-next">&raquo;</span>
+
+                        <span class="cycle-pager"></span>
+
+                        <div class="slide">
+                            <img src="images/bee.jpg" alt="Bee">
+
+                            <div class="slide-text">
+                                <h3>Bee Title Here!</h3>
+                                <p>This is the caption or descriptive text for the bee slide. <a href="#" class="btn-a">Call to action!</a> </p>
+                            </div>
+                            <!-- /slide-text -->
+                        </div>
+                        <!-- /slide -->
+
+                        <div class="slide">
+                            <img src="images/duck.jpg" alt="Duck">
+
+                            <div class="slide-text">
+                                <h3>Duck Title Here!</h3>
+                                <p>This is the caption or descriptive text for the duck slide.</p>
+                            </div>
+                            <!-- /slide-text -->
+                        </div>
+                        <!-- /slide -->
+
+                        <div class="slide">
+                            <img src="images/squirrel-slideshow.jpg" alt="Squirrel">
+
+                            <div class="slide-text">
+                                <h3>Squirrel Title Here!</h3>
+                                <p>This is the caption or descriptive text for the squirrel slide.</p>
+                            </div>
+                            <!-- /slide-text -->
+                        </div>
+                        <!-- /slide -->
+                    </div>
+                    <!-- /cycle-slideshow  -->
+                    <div class="about-us">
+                        <h2>This is About Us</h2>
+                        <p><strong>This is About Us</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, excepturi eligendi amet necessitatibus ab itaque quod iste, iusto aliquam, optio reiciendis tempore illo! Quis natus voluptatum,
+                            excepturi id ipsa earum.
+                        </p>
+                    </div>
+
+                    <!-- TOGGLE : FULL TEXT -->
+                    <h2>IMPORTANT TEXT</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span data-toggle-target=".full-text"
+                            data-toggle-text="Hide the full text..." class="toggle-btn read-more">Read the full text...</span>
+                    </p>
+
+                    <!-- FULL TEXT -->
+                    <div class="full-text">
+                        <h2>FULL TEXT</h2>
+                        <p><strong>This is the full text</strong>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.</p>
+
+                        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <!-- /FULL TEXT -->
+                </div>
+                <!-- /col -->
+
+                <!-- col : SIDEBAR -->
+                <div class="col col-md-4 sidebar">
+                    <h3>Project 28 : JavaScript Toggle : Hide & Reveal</h3>
+                    <p>Sidebar Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                </div>
+                <!-- /col : SIDEBAR-->
+
+            </div>
+            <!-- /row -->
+            <!-- JQuery : TAB-CONTENT -->
+            <!-- source : https://makitweb.com/demos/simple-tabbed-content-area-with-html-css-and-jquery -->
+            <div class="tabs col col-md-8 ">
+                <ul class="tabs-list">
+                    <li class="active"><a href="#tab1">Tab1</a></li>
+                    <li><a href="#tab2">Tab2</a></li>
+                    <li><a href="#tab3">Tab3</a></li>
+                </ul>
+
+                <div id="tab1" class="tab active">
+                    <h3>Tab1</h3>
+                    <p>
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by
+                        their place and supplies it with the necessary
+                    </p>
+                </div>
+                <div id="tab2" class="tab">
+                    <h3>Tab2</h3>
+                    <p>
+                        A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy,
+                        my
+                    </p>
+                </div>
+                <div id="tab3" class="tab">
+                    <h3>Tab3</h3>
+                    <p>
+                        The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt
+                        fox. Bright vixens
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- /container -->
+
+    </div>
+    <!-- /content-area group section -->
+
+    <footer>
+        <p>&copy; 2022 - This is the footer &copy; Dominikus Heru Sutrisno.</p>
+    </footer>
+
+    <!-- <script src="async defer"></script> -->
+</body>
+
+</html>

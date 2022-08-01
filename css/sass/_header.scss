@@ -1,0 +1,43 @@
+.site-header nav {
+    ul {
+        padding: 0;
+        margin: 0;
+        // -- Inheritance SCSS
+        @extend .group;
+    }
+    li {
+        list-style: none;
+        float: left;
+        margin-right: 10px;
+        @include bp-babyBear {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        @include bp-papaBear {
+            margin-right: 50px;
+            padding: 10px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+    }
+    a {
+        display: block;
+        margin-right: 10px;
+        padding: 10px;
+        background-color: $background;
+        color: #fff;
+        text-decoration: none;
+        @include bp-papaBear {
+            padding: 20px 50px 20px 50px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+    }
+}

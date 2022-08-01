@@ -1,0 +1,33 @@
+.box-a {
+    background-color: bisque;
+    /* padding 30px is from the left, top, bottom */
+    padding: 30px;
+    border: 3px solid black;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 150px;
+    /* IMPORTANT */
+    box-sizing: border-box;
+}
+
+.box-b {
+    color: white;
+    background-color: orchid;
+    /* padding 30px is from the left, top, bottom */
+    padding: 30px;
+    /* margin is  between the 2 boxes: top: 0, right: auto, bottom: 20px, left: auto  ==> CENTER */
+    margin: 0px auto 20px auto;
+    border: 3px solid black;
+    width: 250px;
+    height: 150px;
+}
+
+.box-c {
+    color: #fff;
+    background-color: orange;
+    /* padding 30px is from the left, top, bottom */
+    padding: 30px;
+    /* margin is  between the 2 boxes: top: 0, right: auto, bottom: 20px, left: auto */
+    margin-bottom: 20px;
+    border: 3px solid black;
+}
